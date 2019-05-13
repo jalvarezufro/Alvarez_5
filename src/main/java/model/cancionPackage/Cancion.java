@@ -104,11 +104,11 @@ public class Cancion {
 
     @Override
     public String toString() {
-        return "Cancion{" + "Id=" + id + ", T\u00edtulo=" + Título + ", Artista=" + Artista + ", \u00c1lbum=" + Álbum + ", A\u00f1o=" + Año + ", Letra=" + Letra + '}';
+        return "Cancion{" + "Id=" + id + ", Título=" + Título + ", Artista=" + Artista + ", Álbum=" + Álbum + ",  Año=" + Año + ", Letra=" + Letra + '}';
     }
 
     public String toStringWrite() {
-        return "T\u00edtulo: " + Título + " Artista: " + Artista + " \u00c1lbum: " + Álbum + " A\u00f1o: " + Año;
+        return "Título: " + Título + " Artista: " + Artista + " Álbum: " + Álbum + " Año: " + Año;
     }
 
 }
