@@ -69,7 +69,7 @@ public class Gestor {
         return separacion;
     }
 
-    public void agregarListado() {
+    public void agregarListado(ArrayList<Cancion> listadoCanciones) {
         int indicador = 0;
         String informacion = leerArchivo("info canciones.txt"); //lee canciones apra agregar
         String[] separados = separarString(informacion, "\n"); //separa String por canciones
@@ -102,7 +102,7 @@ public class Gestor {
      * <!-- begin-user-doc -->
      * <!--  end-user-doc  --> @generated @ordered
      */
-    public void quitar(String direccion) {
+    public void quitar(ArrayList<Cancion> listadoCanciones) {
         // TODO implement me
     }
 
@@ -110,7 +110,7 @@ public class Gestor {
      * <!-- begin-user-doc -->
      * <!--  end-user-doc  --> @generated @ordered
      */
-    public void agregar() {
+    public void agregar(ArrayList<Cancion> listadoCanciones) {
         Scanner read = new Scanner(System.in);
 
         Cancion cancion;
@@ -138,10 +138,20 @@ public class Gestor {
 
         String informacion = leerArchivo("info canciones.txt");
 
-        informacion = "\n" + listadoCanciones.get(listadoCanciones.size()).toStringWrite();
+        informacion = informacion + "\n" + listadoCanciones.get(0).toStringWrite();
 
         escribirArchivo("info canciones.txt", informacion);
 
+    }
+    
+    public void mostrar(ArrayList<Cancion> listadoCanciones){
+        
+     for(int i = 0 ; i<listadoCanciones.size();i++){
+         listadoCanciones.get(i).toString();
+     }
+     
+
+       
     }
 
 }
